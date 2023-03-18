@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hire me</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Hire me</h1>
+      <h3>Contact information</h3>
+
+      <table border="1" cellspacing="0" cellpadding="10px">
+        <tbody>
+          <tr>
+            <td><strong>Phone</strong></td>
+            <td><a class="link" href="tel: +380965441181">+380965441181</a></td>
+          </tr>
+
+          <tr>
+            <td><strong>Address</strong></td>
+            <td>Ukraine, Kyiv</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <form action="#" style="margin-top: 5px">
+        <fieldset style="width: 600px">
+          <legend>Contact form</legend>
+          <div style="display: flex; gap: 53px">
+            <label for="email">E-mail<span style="color: red">*</span>:</label>
+            <input type="email" id="email" required />
+          </div>
+
+          <div style="display: flex; gap: 30px; margin-top: 5px">
+            <label for="description">Description:</label>
+            <textarea
+              name="description"
+              id="description"
+              cols="21"
+              rows="10"
+            ></textarea>
+          </div>
+
+          <div style="display: flex; gap: 37px; margin-top: 5px">
+            <label for="work-type"> Work type:</label>
+            <select name="work-type" id="work-type">
+              <option value="office">Office work</option>
+              <option value="remote">Remote work</option>
+              <option value="project">Project work</option>
+            </select>
+          </div>
+          <input type="submit" value="Hire me" style="margin-top: 5px" />
+        </fieldset>
+      </form>
+    </div>
+    <br />
+    <a class="link" href="./index.html">Back to CV</a>
+  </body>
+</html>
