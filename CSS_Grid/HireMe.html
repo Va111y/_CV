@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire me</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="HireMe-main">
+        <h1>Hire me</h1>
+    <section> <!--Contact Information-->
+        <h2>Contact information</h2>
+
+        <table class="table-HireMe">
+            <tr>
+                <th>Phone</th>
+                <td>+380965441181</td>
+            </tr>
+            <tr>
+                <th>Adress</th>
+                <td>Kyiv</td>
+            </tr>
+        </table>
+        </br>
+    </section> 
+    <section> <!--Contact form--> 
+        <form action="./HireMe.html" method="get">
+            <fieldset class="fieldset-HireMeInfo">
+                <legend>Contact form</legend>
+                    <div class="email-form">
+                        <label for="email">E-mail <span class="red-symbol">*</span></label>
+                        <input 
+                            type="email" 
+                            name="e-mail"
+                            required
+                            class="form-field email-input"
+                            placeholder="Email"
+                            id="email"> 
+                        <p class="error">Error</p>
+                    </div>
+                    <div class="description-form">
+                        <label for="descriptionText">Description:</label>
+                        <textarea name="description" id="descriptionText" class="form-field description-textarea">
+                        </textarea>
+                    </div>
+                    <div class="workType-form">
+                        <label for="WorkType">Work type</label>
+                        <select name="WorkType" class="form-field WorkType" id="WorkType">
+                            <option value="none"></option>
+                            <option value="full-time">Full-time</option>
+                            <option value="remote-work">Remote work</option>
+                            <option value="one-time-project">One-time project</option>
+                        </select>
+                    </div>
+                    <div class="button">
+                        <label>
+                            <input type="submit" class="HireMeButton" name="HireMe" value="Hire Me">
+                        </label>
+                    </div> 
+            </fieldset>
+        </form>
+    </section> 
+</main>
+</body>
+</html>
