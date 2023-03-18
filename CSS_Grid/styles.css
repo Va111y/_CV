@@ -1,0 +1,159 @@
+.main{
+    width: 1200px;
+    margin: 0 0;
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-columns: 385px 815px;
+    border: 1px #000 solid;
+    height: 1667px;
+}
+.personal-info{
+    padding-top: 58px;
+    font-weight: 600;
+    background-color: #86A3B4;
+    border-right: 1px solid #1E1E1E;
+}
+
+.padding-left{
+    padding-left: 40px;
+}
+
+.name{
+    font-size: 40px;
+    color: #fff;
+    line-height: 48px;
+    padding-bottom: 36px;
+}
+
+.surname{
+    color: #1C2E8C;
+}
+
+.main-photo img{
+    width: 100%;
+    height: 292px;
+    padding-left: 0px;
+    height: 292px;
+}
+
+.contact{
+    color: #263036;
+    padding-top: 50px;
+    padding-bottom: 36px;
+}
+
+.title_personalInfo{
+    font-size: 32px;
+    border-bottom: 6px solid #1E1E1E;
+    width: 289px;
+    padding-bottom: 15px;
+    margin: 0 0;
+    color: #263036;
+}
+
+.content-contact{
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    padding-top: 31px;
+}
+
+.content-contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.title-content-contact{
+    margin: 0 0;
+    font-size: 24px;
+}
+
+.text-content-contact{
+    font-size: 16px;
+    margin: 0 0;
+}
+
+.link{
+    color: #1C2E8C;
+}
+
+.content-languages{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding-top: 24px;
+}
+
+.text-content-languages{
+    margin: 0 0;
+    font-size: 20px;
+    color: #1E1E1E;
+}
+
+.work-info{
+    padding: 58px 54px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.title-workInfo{
+    font-weight: 600;
+    font-size: 36px;
+    color: #1E1E1E;
+    border-bottom: 5px solid #000000;
+    width: 659px;
+    padding-bottom: 28px;
+    margin: 0 0;
+}
+
+.text-workInfo{
+    margin: 0 0;
+    color: #263036;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.flexGap{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.skills-list{
+    display: flex;
+    flex-direction: row;
+    gap: 27px;
+}
+
+.skills-list-container{
+    width: 297px;
+}
+
+.experience{
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.content-experience{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.small-text{
+    font-weight: 400;
+    color: #263036;
+}
+
+.boldText{
+    font-weight: 600;
+    color: #000;
+}
+
+.text-education{
+    font-size: 16px;
+    line-height: 19px;
+}
