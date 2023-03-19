@@ -1,48 +1,84 @@
+:root{
+    /*border*/
+    --border-primary: 1px #1E1E1E solid;
+    --border-aside: 6px solid #1E1E1E;
+    --border-main: 5px solid #000000;
+    /*font*/
+    --font-weight-bold: 600;
+    --font-weight-regular: 400;
+    --font-size-xxsmall: 14px;
+    --font-size-xsmall: 16px;
+    --font-size-small: 20px;
+    --font-size-medium: 24px;
+    --font-size-large: 32px;
+    --font-size-xlarge: 36px;
+    --font-size-xxlarge:40px;
+    /*text*/
+    --line-height-main: 48px;
+    --line-height-small: 18px;
+    /**/
+    --padding-bottom-aside: 36px;
+    --margin-text-default: 0;
+    --space-main: 4px;
+}
+
+.main-theme{
+    /*backgrounds*/
+    --background-color-aside:#86A3B4;
+    --background-color-main: #fff;
+
+    /*text*/
+    --color-aside-primary: #fff;
+    --color-aside-secondary: #1C2E8C;
+    --color-light: #263036;
+    --color-main: #1E1E1E;
+}
+
 .main{
     width: 1200px;
+    height: 1667px;
     margin: 0 0;
     font-family: 'Inter', sans-serif;
     display: grid;
     grid-template-columns: 385px 815px;
-    border: 1px #000 solid;
-    height: 1667px;
+    border: var(--border-primary);
 }
 
 .fixed-position{
-    font-weight: 600;
-    background-color: #86A3B4;
+    font-weight: var(--font-weight-bold);
+    background-color: var(--background-color-aside);
 }
 
 .personal-info{
-    padding-top: 58px;
     position: fixed;
     width: 385px;
-    border-right: 1px solid #1E1E1E;
+    padding-top: calc(var(--space-main) * 14);
+    border-right: var(--border-primary);
 }
 
 .padding-left{
-    padding-left: 40px;
+    padding-left: calc(var(--space-main) * 10);
 }
 
 .name{
-    font-size: 40px;
-    color: #fff;
-    line-height: 48px;
-    padding-bottom: 36px;
+    font-size: var(--font-size-xxlarge);
+    color: var(--color-aside-primary);
+    line-height: var(--line-height-main);
+    padding-bottom: var(--padding-bottom-aside);
 }
 
 .surname{
-    color: #1C2E8C;
-    margin: 0;
+    color: var(--color-aside-secondary);
+    margin: var(--margin-text-default);
 }
 
 .link-HireMe{
-    font-size: 36px;
-    color: #fff;
+    font-size: var(--font-size-xlarge);
+    color: var(--color-aside-primary);
 }
 
 .link-HireMe:visited{
-    color: #1C2E8C;
+    color: var(--color-aside-secondary);
 }
 
 .link-HireMe:hover{
@@ -55,95 +91,95 @@
 }
 
 .contact{
-    color: #263036;
-    padding-top: 50px;
-    padding-bottom: 36px;
+    color: var(--color-light);
+    padding-top: calc(var(--space-main) * 12);
+    padding-bottom: var(--padding-bottom-aside);
 }
 
 .title_personalInfo{
-    font-size: 32px;
-    border-bottom: 6px solid #1E1E1E;
+    font-size: var(--font-size-large);
+    border-bottom: var(--border-aside);
     width: 289px;
-    padding-bottom: 15px;
-    margin: 0 0;
-    color: #263036;
+    padding-bottom: calc(var(--space-main) * 4);
+    margin: var(--margin-text-default);
+    color: var(--color-light);
 }
 
 .content-contact{
     display: flex;
     flex-direction: column;
-    gap: 36px;
-    padding-top: 31px;
+    gap: calc(var(--space-main) * 9);
+    padding-top: calc(var(--space-main) * 8);
 }
 
 .content-contact-container{
     display: flex;
     flex-direction: column;
-    gap: 11px;
+    gap: calc(var(--space-main) * 3);
 }
 
 .title-content-contact{
-    margin: 0 0;
-    font-size: 24px;
+    margin: var(--margin-text-default);
+    font-size: var(--font-size-medium);
 }
 
 .text-content-contact{
-    font-size: 16px;
-    margin: 0 0;
+    font-size: var(--font-size-xsmall);
+    margin: var(--margin-text-default);
 }
 
 .link{
-    color: #1C2E8C;
+    color: var(--color-aside-secondary);
 }
 
 .content-languages{
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding-top: 24px;
+    gap: calc(var(--space-main) * 4);
+    padding-top: calc(var(--space-main) * 8);
 }
 
 .text-content-languages{
-    margin: 0 0;
-    font-size: 20px;
-    color: #1E1E1E;
+    margin: var(--margin-text-default);
+    font-size: var(--font-size-small);
+    color: var(--color-main);
 }
 
 .work-info{
-    padding: 58px 54px;
-    background-color: #fff;
+    background-color: var(--background-color-main);
+    padding: calc(var(--space-main) * 14) calc(var(--space-main) * 13);
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: calc(var(--space-main) * 12);
 }
 
 .title-workInfo{
-    font-weight: 600;
-    font-size: 36px;
-    color: #1E1E1E;
-    border-bottom: 5px solid #000000;
     width: 659px;
-    padding-bottom: 28px;
-    margin: 0 0;
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xlarge);
+    color: var(--color-main);
+    border-bottom: var(--border-main);
+    padding-bottom: calc(var(--space-main) * 7);
+    margin: var(--margin-text-default);
 }
 
 .text-workInfo{
-    margin: 0 0;
-    color: #263036;
-    font-weight: 600;
-    font-size: 16px;
+    margin: var(--margin-text-default);
+    color: var(--color-light);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-xsmall);
 }
 
 .flexGap{
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    gap: calc(var(--space-main) * 7);
 }
 
 .skills-list{
     display: flex;
     flex-direction: row;
-    gap: 27px;
+    gap: calc(var(--space-main) * 7);
 }
 
 .skills-list-container{
@@ -151,29 +187,29 @@
 }
 
 .experience{
-    font-size: 14px;
-    line-height: 17px;
+    font-size: var(--font-size-xxsmall);
+    line-height: var(--line-height-small);
 }
 
 .content-experience{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: calc(var(--space-main) * 4);
 }
 
 .small-text{
-    font-weight: 400;
-    color: #263036;
+    font-weight: var(--font-weight-regular);
+    color: var(--color-light);
 }
 
 .boldText{
-    font-weight: 600;
-    color: #000;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-main);
 }
 
 .text-education{
-    font-size: 16px;
-    line-height: 19px;
+    font-size: var(--font-size-xsmall);
+    line-height: var(--line-height-small);
 }
 
 /*Hireme styles*/
