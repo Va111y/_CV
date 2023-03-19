@@ -7,10 +7,16 @@
     border: 1px #000 solid;
     height: 1667px;
 }
-.personal-info{
-    padding-top: 58px;
+
+.fixed-position{
     font-weight: 600;
     background-color: #86A3B4;
+}
+
+.personal-info{
+    padding-top: 58px;
+    position: fixed;
+    width: 385px;
     border-right: 1px solid #1E1E1E;
 }
 
@@ -27,12 +33,24 @@
 
 .surname{
     color: #1C2E8C;
+    margin: 0;
+}
+
+.link-HireMe{
+    font-size: 36px;
+    color: #fff;
+}
+
+.link-HireMe:visited{
+    color: #1C2E8C;
+}
+
+.link-HireMe:hover{
+    text-decoration: none;
 }
 
 .main-photo img{
     width: 100%;
-    height: 292px;
-    padding-left: 0px;
     height: 292px;
 }
 
@@ -163,7 +181,11 @@
 .HireMe-main{
     max-width: 1024px;
     font-family: 'IBM Plex Sans', sans-serif;
-    margin: 0 auto;
+    height: 708px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 input,
