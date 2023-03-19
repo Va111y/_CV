@@ -34,30 +34,57 @@
     --color-main: #1E1E1E;
 }
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 .main{
-    width: 1200px;
-    height: 1667px;
-    margin: 0 0;
+    width: 100vw;
     font-family: 'Inter', sans-serif;
     display: grid;
     grid-template-columns: 385px 815px;
-    border: var(--border-primary);
 }
 
-.fixed-position{
+/*.fixed-position{
     font-weight: var(--font-weight-bold);
     background-color: var(--background-color-aside);
+}*/
+
+@media screen and (max-width: 550px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+    .work-info{
+        width: 100%;
+    }
+
+    .personal-info{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .personal-info{
+        border-right: var(--border-primary);
+    }
 }
 
 .personal-info{
-    position: fixed;
-    width: 385px;
     padding-top: calc(var(--space-main) * 14);
-    border-right: var(--border-primary);
+    font-weight: var(--font-weight-bold);
+    background-color: var(--background-color-aside);
+    height: 100%;
 }
 
 .padding-left{
     padding-left: calc(var(--space-main) * 10);
+}
+
+.padding-workInfo{
+    padding: 0 calc(var(--space-main) * 10); 
 }
 
 .name{
@@ -87,7 +114,6 @@
 
 .main-photo img{
     width: 100%;
-    height: 292px;
 }
 
 .contact{
@@ -137,6 +163,7 @@
     flex-direction: column;
     gap: calc(var(--space-main) * 4);
     padding-top: calc(var(--space-main) * 8);
+    padding-bottom: calc(var(--space-main)*16);
 }
 
 .text-content-languages{
@@ -147,14 +174,13 @@
 
 .work-info{
     background-color: var(--background-color-main);
-    padding: calc(var(--space-main) * 14) calc(var(--space-main) * 13);
     display: flex;
     flex-direction: column;
     gap: calc(var(--space-main) * 12);
 }
 
 .title-workInfo{
-    width: 659px;
+    padding-right: calc(var(--space-main)*25);
     font-weight: var(--font-weight-bold);
     font-size: var(--font-size-xlarge);
     color: var(--color-main);
@@ -176,6 +202,10 @@
     gap: calc(var(--space-main) * 7);
 }
 
+.summary{
+    padding-top: calc(var(--space-main) * 14) ;
+}
+
 .skills-list{
     display: flex;
     flex-direction: row;
@@ -183,7 +213,8 @@
 }
 
 .skills-list-container{
-    width: 297px;
+    width: 50%;
+    padding-left: 15px;
 }
 
 .experience{
@@ -205,6 +236,10 @@
 .boldText{
     font-weight: var(--font-weight-bold);
     color: var(--color-main);
+}
+
+.education{
+    padding-bottom: calc(var(--space-main) * 10) ;
 }
 
 .text-education{
