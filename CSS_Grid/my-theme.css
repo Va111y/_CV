@@ -1,11 +1,11 @@
 .my-theme{
     /*backgrounds*/
-    --background-color-aside:#8E6C88;
-    --background-color-main: #D3B7CE;
+    --background-color-aside:#31572C;
+    --background-color-main: #4F772D;
 
     /*text*/
-    --color-aside-primary: #CCDBDC;
-    --color-aside-secondary: #400836;
-    --color-light: #2b2727;
-    --color-main: #263D42;
+    --color-aside-primary: #ECF39E;
+    --color-aside-secondary: #132A13;
+    --color-light: #e7e7e7;
+    --color-main: #bfe0bf;
 }
