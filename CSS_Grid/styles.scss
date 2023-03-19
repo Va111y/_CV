@@ -1,0 +1,468 @@
+@import 'main-theme';
+@import 'my-theme';
+
+
+@mixin animationSlideIn ($delay) {
+    animation-name: slide-mainSection;
+    animation-duration: 2s;
+    animation-delay: $delay;
+}
+
+@keyframes slide-mainSection {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/*border*/
+$bd-color: #1e1e1e;
+$bd-small: 1px;
+$bd-big: 6px;
+
+/*font*/
+$boldtext: 600;
+$regulartext: 400;
+$xs-text: 16px;
+$s-text: 20px;
+$m-text: 24px;
+$l-text: 32px;
+$xl-text: 40px;
+
+/*text-decor*/
+$line-h-main: 48px;
+$line-h-s: 18px;
+
+/*spaces*/
+$xs-space: 4px;
+$s-space: 16px;
+$m-space: 24px;
+$l-space: 36px;
+$xl-space:56px;
+$zero-space: 0;
+
+@media screen and (max-width: 550px) {
+    .main{
+        display: flex;
+        flex-direction: column;
+        border: none;
+    }
+    .work-info{
+        width: 100%;
+    }
+
+    .personal-info{
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 550px) {
+    .personal-info{
+        border-right: $bd-color solid $bd-small;
+    }
+
+    .box-shadow{
+        box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
+    }
+
+    .image-main-photo:hover{
+        width: 110%;
+        box-shadow: 2px 2px 5px rgb(92, 69, 219);
+    }
+}
+
+*{
+    margin: $zero-space;
+    padding: $zero-space;
+}
+
+.main{
+    width: 100vw;
+    font-family: 'Inter', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 2.1fr 3fr;
+    gap: $xs-space;
+}
+
+.personal-info{
+    font-weight: $boldtext;
+    height: 100%;
+    @include animationSlideIn (0s);
+    z-index: 1;
+    background-color: var(--background-color-aside);
+}
+
+.box-shadow{
+    padding-top: $xl-space;
+}
+
+.padding-left{
+    padding-left: $l-space;
+}
+
+.padding-workInfo{
+    padding: $zero-space $l-space; 
+}
+
+.name{
+    font-size: $xl-text;
+    line-height: $line-h-main;
+    padding-bottom: $l-space;
+    color: var(--color-aside-primary);
+}
+
+.surname{
+    margin: $zero-space;
+    color: var(--color-aside-secondary);
+}
+
+.link-HireMe{
+    font-size: $xl-text;
+    color: var(--color-aside-primary);
+
+    &:visited {
+        color: var(--color-aside-secondary);
+    }
+
+    &:hover{
+        text-decoration: none;
+    }
+}
+
+.image-main-photo{
+    width: 100%;
+    transition: width 2s;
+}
+
+.contact{
+    color: var(--color-light);
+    padding-top: $l-space;
+    padding-bottom: $l-space;
+}
+
+.title_personalInfo{
+    font-size: $l-text;
+    border-bottom: $bd-big $bd-color solid;
+    width: 80%;
+    padding-bottom: $s-space;
+    margin: $zero-space;
+    color: var(--color-light);
+}
+
+.content-contact{
+    display: flex;
+    flex-direction: column;
+    gap: $l-space;
+    padding-top: $m-space;
+}
+
+.content-contact-container{
+    display: flex;
+    flex-direction: column;
+    gap: $s-space;
+}
+
+.title-content-contact{
+    margin: $zero-space;
+    font-size: $m-text;
+}
+
+.text-content-contact{
+    font-size: $xs-text;
+    margin: $zero-space;
+}
+
+.link{
+    color: var(--color-aside-secondary);
+}
+
+.content-languages{
+    display: flex;
+    flex-direction: column;
+    gap: $s-space;
+    padding-top: $m-space;
+    padding-bottom: $xl-space;
+}
+
+.text-content-languages{
+    margin: $zero-space;
+    font-size: $s-text;
+    color: var(--color-main);
+}
+
+.work-info{
+    background-color: var(--background-color-main);
+    display: flex;
+    flex-direction: column;
+    gap: $l-space;
+    @include animationSlideIn (0.5s);
+}
+
+.title-workInfo{
+    padding-right: $xl-space;
+    font-weight: $boldtext;
+    font-size: $l-text;
+    color: var(--color-main);
+    border-bottom: $bd-big $bd-color solid;
+    padding-bottom: $m-space;
+    margin: $zero-space;
+    line-height: $line-h-main;
+}
+
+.text-workInfo{
+    margin: $zero-space;
+    color: var(--color-light);
+    font: {
+        weight: $boldtext;
+        size: $xs-text;
+    }
+}
+
+.flexGap{
+    display: flex;
+    flex-direction: column;
+    gap: $m-space;
+}
+
+.summary{
+    padding-top: $l-space;
+}
+
+.skills-list{
+    display: flex;
+    flex-direction: row;
+    gap: $m-space;
+}
+
+.skills-list-container{
+    width: 50%;
+    padding-left: $s-space;
+}
+
+.experience{
+    font-size: $xs-text;
+    line-height: $line-h-s;
+}
+
+.content-experience{
+    display: flex;
+    flex-direction: column;
+    gap:  $s-space;
+}
+
+.small-text{
+    font-weight: $regulartext;
+    color: var(--color-light);
+}
+
+.previous-job{
+    opacity: 0.7;
+}
+
+.previous-job:hover{
+    animation: opacityText 5s ease-in-out;
+}
+
+@keyframes opacityText {
+    0% {
+        opacity: 0.7;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.boldText{
+    font-weight: $boldtext;
+    color: var(--color-main);
+}
+
+.education{
+    padding-bottom: $l-space ;
+}
+
+.text-education{
+    font-size: $xs-text;
+    line-height: $line-h-s;
+}
+
+/*Hireme styles*/
+
+.HireMe-main{
+    max-width: 1024px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    height: 708px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: hireMe-animation 1s linear;
+}
+
+@keyframes hireMe-animation {
+    from {
+        scale: 200%;
+        opacity: 0;
+    }
+    to {
+        scale: 100%;
+        opacity: 1;
+    }
+}
+
+input,
+textarea,
+select{
+    appearance: none;
+    background-color: transparent;
+    margin: $zero-space;
+    padding: $zero-space;
+    border: none;
+}
+
+.table-HireMe {
+    border-spacing: $zero-space;
+    border-collapse: collapse;
+
+    th{
+        border: $bd-color $bd-small solid;
+        padding: 10px 10px;
+        text-align: center;
+        font-weight: $boldtext;
+    }
+
+    td{
+        border: $bd-color $bd-small solid;
+        padding: 10px 10px;
+        text-align: center;
+    }
+}
+
+.fieldset-HireMeInfo{
+    display: flex;
+    flex-direction: column;
+    gap: $m-space;
+    padding: $zero-space $s-space;
+    font: {
+        weight: $regulartext;
+        size: $s-text;
+    }
+    color: #6F7482;
+    letter-spacing: 0.01em;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+}
+
+legend{
+    color: #000;
+}
+
+.form-field{
+    background-color: #F8FAFC;
+    border-radius: 4px;
+    width: 460px;
+    border: none;
+    padding: $s-space;
+    color: #3B4256;
+    font: {
+        weight: $regulartext;
+        size: $s-text;
+    }
+    line-height: 150%;
+    border: none;
+    outline: none;
+
+    &::placeholder{
+        color: #B8BCCA;
+    }
+
+    .email-input,
+    .WorkType{
+        letter-spacing: 0.01em;
+    }
+
+    &:focus{
+        border: $bd-small solid #0048D9;
+    }
+}
+
+.email-input:invalid{
+    border: $bd-small solid #ED0131;
+
+&:valid{
+    border: $bd-small solid #0E6245;
+}
+}
+
+.error,
+.success{
+    display: none;
+    font-size: $xs-text;
+    margin: $zero-space;
+    padding-top: 2px;
+}
+
+.error{
+    color: #ED0131;
+}
+
+.email-input:invalid + .error{
+    display: block;
+}
+
+.email-input:valid + .success{
+    display: block;
+}
+
+
+.red-symbol{
+    color: red;
+}
+
+.description-textarea{
+    min-height: 140px;
+}
+
+.WorkType{
+    background: url(./mdi_arrow_drop_down.svg) no-repeat center right 24px;
+    background-color: #F8FAFC;
+    width: 490px;
+}
+
+.HireMeButton{
+    padding: $s-space;
+    border-radius: $bd-big;
+    color: #FFFFFF;
+    font: {
+        weight: $boldtext;
+        size: $s-text;
+    }
+    cursor: pointer;
+
+    &:enabled{
+        background-color: #0048D9;
+    }
+
+    &:hover{
+        background-color: #002266; 
+    }
+
+    :disabled{
+        background-color: #84a9f3;
+    }
+}

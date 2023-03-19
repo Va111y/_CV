@@ -53,7 +53,7 @@
 }*/
 
 @media screen and (max-width: 550px) {
-    .main{
+    .CV-main{
         display: flex;
         flex-direction: column;
         border: none;
