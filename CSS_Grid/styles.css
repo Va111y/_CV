@@ -77,8 +77,7 @@
     }
 
     .image-main-photo:hover{
-        transform: scale(1.5)
-        translate(15%);
+        width: 110%;
         box-shadow: 2px 2px 5px rgb(92, 69, 219);
     }
 }
@@ -87,6 +86,20 @@
     font-weight: var(--font-weight-bold);
     background-color: var(--background-color-aside);
     height: 100%;
+    animation: slide-mainSection 2s ease-in;
+    z-index: 1;
+}
+
+@keyframes slide-mainSection {
+    from {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 .box-shadow{
@@ -128,6 +141,7 @@
 
 .image-main-photo{
     width: 100%;
+    transition: width 2s;
 }
 
 .contact{
@@ -191,7 +205,7 @@
     display: flex;
     flex-direction: column;
     gap: calc(var(--space-main) * 12);
-   
+    animation: slide-mainSection 2s ease-in .5s;
 }
 
 .title-workInfo{
@@ -254,7 +268,22 @@
 }
 
 .previous-job:hover{
-    opacity: 1;
+    animation: opacityText 5s ease-in-out;
+}
+
+@keyframes opacityText {
+    0% {
+        opacity: 0.7;
+    }
+    25% {
+        opacity: 0.8;
+    }
+    50% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .boldText{
@@ -281,6 +310,18 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    animation: hireMe-animation 1s linear;
+}
+
+@keyframes hireMe-animation {
+    from {
+        scale: 200%;
+        opacity: 0;
+    }
+    to {
+        scale: 100%;
+        opacity: 1;
+    }
 }
 
 input,
