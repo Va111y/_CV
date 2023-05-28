@@ -35,7 +35,7 @@
   /*text-decor*/
   /*spaces*/
   @media screen and (max-width: 550px) {
-    .main {
+    .CV-main {
       display: flex;
       flex-direction: column;
       border: none;
@@ -54,17 +54,13 @@
     .box-shadow {
       box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
     }
-    .image-main-photo:hover {
-      width: 110%;
-      box-shadow: 2px 2px 5px rgb(92, 69, 219);
-    }
   }
   * {
     margin: 0;
     padding: 0;
   }
   
-  .main {
+  .CV-main {
     width: 100vw;
     font-family: "Inter", sans-serif;
     display: grid;
@@ -119,7 +115,23 @@
   
   .image-main-photo {
     width: 100%;
-    transition: width 2s;
+  }
+  
+  .clickPhoto-bigger {
+    transform: scale(1.1);
+    transition: all 2s ease-in-out;
+  }
+  
+  @keyframes smaller {
+    from {
+      transform: scale(1.1);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  .clickPhoto-smaller {
+    animation: smaller 2s ease-in-out;
   }
   
   .contact {
@@ -197,6 +209,9 @@
     padding-bottom: 24px;
     margin: 0;
     line-height: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
   }
   
   .text-workInfo {
@@ -277,6 +292,12 @@
   .text-education {
     font-size: 16px;
     line-height: 18px;
+  }
+  
+  .nav {
+    border: #1e1e1e 1px solid;
+    width: 32px;
+    text-align: center;
   }
   
   /*Hireme styles
@@ -383,9 +404,9 @@
       }
   }
   
-  .email-input:invalid{
-      border: $bd-small solid #ED0131;
-  
+  .email-input {
+      &:invalid{
+      border: $bd-small solid #ED0131; }
   &:valid{
       border: $bd-small solid #0E6245;
   }

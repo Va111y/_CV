@@ -1,53 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hire me</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.4/dist/tailwind.min.css" rel="stylesheet">
-</head>
-
+    </head>
 <body>
-    <main class="flex flex-col min-h-screen justify-center items-center w-5xl font-serif">
+<main class="flex flex-col min-h-screen justify-center items-center w-5xl font-serif">
         <h1 class="text-xl font-semibold">Hire me</h1>
-        <section> <!--Contact Information-->
-            <h2>Contact information</h2>
-            <table>
-                <tr>
-                    <th class="font-semibold border border-black border-solid p-2.5 text-center">Phone</th>
-                    <td class="border border-black border-solid p-2.5 text-center">+380965441181</td>
-                </tr>
-                <tr>
-                    <th class="font-semibold border border-black border-solid p-2.5 text-center">Adress</th>
-                    <td class="border border-black border-solid p-2.5 text-center">Kyiv</td>
-                </tr>
-            </table>
-            </br>
-        </section>
-        <section> <!--Contact form-->
-            <form action="./HireMe.html" method="get">
-                <fieldset
-                    class="border border-black border-solid flex flex-col gap-6 px-4 font-normal text-gray-600 tracking-widest">
-                    <legend>Contact form</legend>
-                    <div class="flex flex-col gap-0.5 email-form">
+    <section> <!--Contact Information-->
+        <h2>Contact information</h2>
+        <table>
+            <tr>
+                <th class="font-semibold border border-black border-solid p-2.5 text-center">Phone</th>
+                <td class="border border-black border-solid p-2.5 text-center">+380669913416</td>
+            </tr>
+            <tr>
+                <th class="font-semibold border border-black border-solid p-2.5 text-center">Adress</th>
+                <td class="border border-black border-solid p-2.5 text-center">Kharkiv</td>
+            </tr>
+        </table>
+        </br>
+    </section> 
+    <section> <!--Contact form--> 
+        <form action="./HireMe.html" method="get">
+            <fieldset class="border border-black border-solid flex flex-col gap-6 px-4 font-normal text-gray-600 tracking-widest">
+                <legend>Contact form</legend>
+                    <div class="flex flex-col gap-0.5">
                         <label for="email">E-mail <span class="text-red-600">*</span></label>
-                        <input type="email" name="e-mail" required class="bg-gray-100 placeholder-gray-400 rounded w-10/12 p-4 text-gray-800 font-normal font-xl leading-normal focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-red-500 invalid:text-red-600
+                        <input 
+                            type="email" 
+                            name="e-mail"
+                            required
+                            class="bg-gray-100 placeholder-gray-400 rounded w-10/12 p-4 text-gray-800 font-normal font-xl leading-normal focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 invalid:border-red-500 invalid:text-red-600
                             focus:invalid:border-red-500 focus:invalid:ring-red-500 tracking-widest"
-                            placeholder="Email" id="email">
+                            placeholder="Email"
+                            id="email"> 
                     </div>
-                    <div class="flex flex-col gap-0.5 description-form">
+                    <div class="flex flex-col gap-0.5">
                         <label for="descriptionText">Description:</label>
-                        <textarea name="description" id="descriptionText"
-                            class="bg-gray-100 placeholder-gray-400 rounded w-10/12 p-4 text-gray-800 font-normal font-xl leading-normal focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
+                        <textarea name="description" id="descriptionText" class="bg-gray-100 placeholder-gray-400 rounded w-10/12 p-4 text-gray-800 font-normal font-xl leading-normal focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500">
                         </textarea>
                     </div>
-                    <div class="flex flex-col gap-0.5 workType-form">
+                    <div class="flex flex-col gap-0.5">
                         <label for="WorkType">Work type</label>
-                        <select name="WorkType"
-                            class="bg-gray-100 placeholder-gray-400 rounded w-10/12 p-4 text-gray-800 font-normal font-xl leading-normal focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 tracking-widest"
-                            id="WorkType">
+                        <select name="WorkType" class="bg-gray-100 placeholder-gray-400 rounded w-10/12 p-4 text-gray-800 font-normal font-xl leading-normal focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 tracking-widest" id="WorkType">
                             <option value="none"></option>
                             <option value="full-time">Full-time</option>
                             <option value="remote-work">Remote work</option>
@@ -56,15 +55,12 @@
                     </div>
                     <div class="flex flex-col gap-0.5 button pb-2">
                         <label>
-                            <input type="submit"
-                                class="bg-blue-700 p-4 rounded-md text-white font-semibold font-xl cursor-pointer hover:bg-blue-900 disabled:bg-blue-300"
-                                name="HireMe" value="Hire Me">
+                            <input type="submit" class="bg-blue-700 p-4 rounded-md text-white font-semibold font-xl cursor-pointer hover:bg-blue-900 disabled:bg-blue-300" name="HireMe" value="Hire Me">
                         </label>
-                    </div>
-                </fieldset>
-            </form>
-        </section>
-    </main>
+                    </div> 
+            </fieldset>
+        </form>
+    </section> 
+</main>
 </body>
-
 </html>

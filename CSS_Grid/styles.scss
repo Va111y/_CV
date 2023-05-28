@@ -47,7 +47,7 @@ $xl-space:56px;
 $zero-space: 0;
 
 @media screen and (max-width: 550px) {
-    .main{
+    .CV-main{
         display: flex;
         flex-direction: column;
         border: none;
@@ -69,11 +69,6 @@ $zero-space: 0;
     .box-shadow{
         box-shadow: 1px 0px 13px 7px rgba(80, 75, 75, 0.25);
     }
-
-    .image-main-photo:hover{
-        width: 110%;
-        box-shadow: 2px 2px 5px rgb(92, 69, 219);
-    }
 }
 
 *{
@@ -81,7 +76,7 @@ $zero-space: 0;
     padding: $zero-space;
 }
 
-.main{
+.CV-main{
     width: 100vw;
     font-family: 'Inter', sans-serif;
     display: grid;
@@ -136,7 +131,25 @@ $zero-space: 0;
 
 .image-main-photo{
     width: 100%;
-    transition: width 2s;
+}
+
+.clickPhoto-bigger {
+    transform: scale(1.1);
+    transition: all 2s ease-in-out;
+}
+
+@keyframes smaller {
+    from {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.clickPhoto-smaller {
+    animation: smaller 2s ease-in-out;
 }
 
 .contact{
@@ -212,6 +225,9 @@ $zero-space: 0;
     padding-bottom: $m-space;
     margin: $zero-space;
     line-height: $line-h-main;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 }
 
 .text-workInfo{
@@ -295,6 +311,13 @@ $zero-space: 0;
 .text-education{
     font-size: $xs-text;
     line-height: $line-h-s;
+}
+
+.nav {
+    border: $bd-color $bd-small solid;
+    width: 32px;
+    height: 50px;
+    text-align: center;
 }
 
 /*Hireme styles
@@ -401,9 +424,9 @@ legend{
     }
 }
 
-.email-input:invalid{
-    border: $bd-small solid #ED0131;
-
+.email-input {
+    &:invalid{
+    border: $bd-small solid #ED0131; }
 &:valid{
     border: $bd-small solid #0E6245;
 }
