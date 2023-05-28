@@ -320,6 +320,31 @@ $zero-space: 0;
     text-align: center;
 }
 
+.buttonLoad {
+    appearance: none;
+    cursor: pointer;
+    border-color: var(--background-color-aside);
+    background-color: #fff;
+    padding: 10px 10px;
+    max-width: 200px;
+}
+
+.load-project {
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.load-project a {
+    color: #1e1e1e;
+}
+
+.load-project a:hover {
+    color: rgb(25, 0, 255);
+}
+
+
 /*Hireme styles
 
 .HireMe-main{

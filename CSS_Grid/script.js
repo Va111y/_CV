@@ -78,3 +78,42 @@ document.addEventListener('keydown', (event) => {
         });
     }
 })
+
+const btnLoad = document.querySelector('.buttonLoad');
+const divload = document.querySelector('.load-project');
+
+function newElement (repo) {
+    const oneRepo = document.createElement('div');
+
+    const link = document.createElement('a');
+    link.textContent = repo.full_name;
+    link.setAttribute('href', repo.html_url);
+
+    oneRepo.appendChild(link);
+
+    if(repo.description) {
+        const desc = document.createElement('p');
+        desc.textContent = repo.description;
+
+        oneRepo.appendChild(desc);
+    };
+
+    divload.appendChild(oneRepo);
+}
+
+async function loadRepos () {
+    const allRepos = await fetch('https://api.github.com/users/va111y/repos')
+    const loadedRepo = await allRepos.json()
+
+    loadedRepo.forEach(repo => {
+            newElement(repo)
+        });
+}
+
+btnLoad.addEventListener('click', loadRepos);
+
+// function loadData (repoUrl) {
+//     repoUrl.forEach(d => {
+//         createElement(d)
+//     });
+// }
