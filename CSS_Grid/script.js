@@ -78,3 +78,53 @@ document.addEventListener('keydown', (event) => {
         });
     }
 })
+
+const btnLoad = document.querySelector('.buttonLoad');
+const divload = document.querySelector('.load-project');
+
+
+class apiGitHub {
+    constructor(token, user) {
+        this.token = token;
+        this.user = user;
+        this.urlApi = 'https://api.github.com';
+    }
+
+    async getRepos () {
+        const response = await fetch(`${this.urlApi}/users/${this.user}/repos`, {
+            headers: {
+                Authorization: `token ${this.token}`
+        }
+    });
+    const data = await response.json();
+    return data;
+};
+};
+
+function newElement (repo) {
+    const oneRepo = document.createElement('div');
+
+    const link = document.createElement('a');
+    link.textContent = repo.full_name;
+    link.setAttribute('href', repo.html_url);
+
+    oneRepo.appendChild(link);
+
+    if(repo.description) {
+        const desc = document.createElement('p');
+        desc.textContent = repo.description;
+
+        oneRepo.appendChild(desc);
+    };
+
+    divload.appendChild(oneRepo);
+}
+
+btnLoad.addEventListener('click', async function() {
+    const api = new apiGitHub('TOKEN', 'va111y');
+    const repos = await api.getRepos();
+
+    repos.forEach(repo => {
+        newElement(repo)
+    });
+});
